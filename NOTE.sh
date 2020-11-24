@@ -42,8 +42,16 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 chmod +x ~/.config/polybar
 chmod +x ~/.config/polybar/scripts/*
 
-#https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 
+cd $HOME 
+wget https://wallpaperaccess.com/download/4k-minimalist-160352 >> ~/Desktop/wallpaper.png
+
+cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
+cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
+cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
+
+
+#https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
 
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
 Section "InputClass"
@@ -54,3 +62,5 @@ Section "InputClass"
 EndSection
 
 EOF
+
+
