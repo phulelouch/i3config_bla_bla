@@ -3,7 +3,7 @@ sudo apt install ibus-unikey
 sudo apt install rofi
 sudo apt install polybar
 sudo apt install feh
-sudo apt instal terminator
+sudo apt install terminator
 sudo apt-get install software-properties-common
 sudo apt install python3-pip
 sudo apt install python-pip
