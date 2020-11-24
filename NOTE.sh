@@ -6,7 +6,8 @@ sudo apt install feh
 sudo apt install terminator
 sudo apt-get install software-properties-common
 sudo apt install python3-pip
-sudo apt install python-pip
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 sudo apt install scrot
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
