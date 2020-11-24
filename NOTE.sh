@@ -12,14 +12,14 @@ python get-pip.py
 sudo apt install scrot
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-sleep(1)
+
 synclient NaturalScrolling=1 VertScrollDelta=-113
 sudo chmod a+w /sys/class/backlight/intel_backlight/brightness
 sleep(1)
 cd $HOME
 
 git clone https://github.com/adi1090x/polybar-themes
-sleep(1)
+
 cd polybar-themes/polybar-2
 cp -r fonts/* ~/.local/share/fonts
 fc-cache -v
@@ -32,16 +32,18 @@ cp -r * ~/.config/polybar
 
 # run launch.sh 
 ~/.config/polybar/launch.sh
-sleep(1)
+
 cd $HOME 
-sleep(1)
+
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 #Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
-rofi-theme-selector
+
+chmod +x ~/.config/polybar
+chmod +x ~/.config/polybar/scripts/*
 
 #https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
-sleep(1)
+
 
 sudo mkdir -p /etc/X11/xorg.conf.d && sudo tee <<'EOF' /etc/X11/xorg.conf.d/90-touchpad.conf 1> /dev/null
 Section "InputClass"
