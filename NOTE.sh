@@ -46,9 +46,9 @@ chmod +x ~/.config/polybar/scripts/*
 cd $HOME 
 wget https://wallpaperaccess.com/download/4k-minimalist-160352 >> ~/Desktop/wallpaper.jpg
 
-cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
-cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
-cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
+sudo cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
+sudo cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
+sudo cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
 
 
 #https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
