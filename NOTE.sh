@@ -44,7 +44,7 @@ chmod +x ~/.config/polybar/scripts/*
 
 
 cd $HOME 
-wget https://wallpaperaccess.com/download/4k-minimalist-160352 >> ~/Desktop/wallpaper.png
+wget https://wallpaperaccess.com/download/4k-minimalist-160352 >> ~/Desktop/wallpaper.jpg
 
 cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
 cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
