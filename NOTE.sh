@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 synclient NaturalScrolling=1 VertScrollDelta=-113
 sudo chmod a+w /sys/class/backlight/intel_backlight/brightness
-sleep(1)
+
 cd $HOME
 
 git clone https://github.com/adi1090x/polybar-themes
