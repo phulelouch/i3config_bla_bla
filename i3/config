@@ -216,7 +216,7 @@ for_window [class="Skype"] floating enable, border normal
 #  position top
 #  separator_symbol " | "
 
- # status_command i3status --config /home/phulelouch/.config/i3/i3status.conf
+ # status_command i3status --config ~/.config/i3/i3status.conf
   # status_command  i3status
   #status_command SCRIPT_DIR=/i3blocks i3blocks -c ~/.i3/i3blocks.conf
 
@@ -268,9 +268,9 @@ exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
 
 # startup
-exec_always --no-startup-id /home/phulelouch/.config/polybar/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id xset b off
-exec_always --no-startup-id feh --bg-scale /home/phulelouch/Desktop/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale ~/Desktop/wallpaper.jpg
 exec_always --no-startup-id alias ls="ls --color"
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true 
