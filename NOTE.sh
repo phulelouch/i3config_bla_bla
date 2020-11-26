@@ -1,3 +1,4 @@
+cp $(pwd)/wallpaper.jpg ~/Desktop/wallpaper.jpg
 sudo apt install i3-gaps
 sudo apt install ibus-unikey
 sudo apt install rofi
@@ -44,12 +45,12 @@ chmod +x ~/.config/polybar/scripts/*
 
 
 cd $HOME 
-wget https://wallpaperaccess.com/download/4k-minimalist-160352 >> ~/Desktop/wallpaper.jpg
+
 
 sudo cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
 sudo cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
 sudo cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
-cp $(pwd)/wallpaper.jpg ~/Desktop/wallpaper.jpg
+
 
 
 #https://cravencode.com/post/essentials/enable-tap-to-click-in-i3wm/
