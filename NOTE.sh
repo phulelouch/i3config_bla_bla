@@ -34,6 +34,10 @@ cp -r * ~/.config/polybar
 # run launch.sh 
 ~/.config/polybar/launch.sh
 
+sudo cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
+sudo cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
+sudo cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
+~/.config/polybar/launch.sh
 cd $HOME 
 
 
@@ -47,9 +51,6 @@ chmod +x ~/.config/polybar/scripts/*
 cd $HOME 
 
 
-sudo cp -r ~/Desktop/i3config_bla_bla/i3/* ~/.config/i3/*
-sudo cp -r ~/Desktop/i3config_bla_bla/polybar/* ~/.config/polybar/*
-sudo cp -r ~/Desktop/i3config_bla_bla/rofi/*  ~/.config/rofi/*
 
 
 
