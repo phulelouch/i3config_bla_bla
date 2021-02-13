@@ -5,7 +5,7 @@
 set $mod Mod4
 set $sup Mod1
 
-set $bg-color 	 #2f343f
+set $bg-color 	 #212121
 
 set $black       #212121
 set $darkblack   #000000
@@ -23,13 +23,13 @@ set $white       #00BCD4
 set $darkwhite   #a89984
 set $background  #000000
 # set $transparent #000000FF
-set $transparent #333333
+set $transparent #000000
 
 #set $default_gaps_inner 10
 #set $default_gaps_outer 25
 
-gaps inner 15
-gaps outer 20 
+gaps inner 1
+gaps outer 1
 
 #workspace $ws1 gaps inner 2
 #workspace $ws1 gaps outer 5
@@ -42,22 +42,22 @@ floating_maximum_size -1 x -1
 font pango:Consolas, FontAwesome Bold 11
 
 # #CLASS                   BORDER   BACKGROUND  TEXT     INDICATOR
-# client.focused           #4c7899  $blue       #eff1f5  #2e9ef4
+#client.focused           #4c7899  $black       #eff1f5  #2e9ef4
 # client.unfocused         #333333  #2b303b     #888888  #292d2e
 # client.focused_inactive  #333333  $violet     #eff1f5  #484e50
 # client.urgent            #2f343a  $red        #eff1f5  #900000
 # client.background        $black
 
 #CLASS                   BORDER         BACKGROUND        TEXT      INDICATOR      CHILD BORDER
-client.focused           $transparent   $transparent      $white    $darkwhite     $white
+#client.focused          $transparent   $transparent      $white    $darkwhite     $white
 client.focused_inactive  $transparent   $transparent      $white    $transparent
-client.unfocused         $transparent   #2b303b           #888888   #292d2e
+client.unfocused         $transparent   #212121           #888888   #212121
 client.urgent            $transparent   $transparent      $red      $transparent
 client.background        $transparent
 
 floating_modifier $mod
 
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec  mate-terminal
 #bindsym $mod+Return exec i3-sensible-terminal
 
 
@@ -72,7 +72,7 @@ bindsym $mod+d exec rofi -show run -lines 8 -columns 1 -eh 2 -font "FontAwesome 
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -i -y 30 -o 0.8 -l 100 -w 500 -p "\$" -nb "$background" -nf "$white" -sb "$background" -sf "$green" -fn "Consolas-10:normal"'
 # bindsym $mod+d exec sh /home/inspiron/.config/i3/bin/dmenu_suh.sh
 # bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec dmenu_run -l 9 -p "Run": -fn FixedsysTTF -nb "$transparent" -nf "$white" -sb "$blue" -sf "$background"
+#bindsym $mod+d exec dmenu_run -l 9 -p "Run": -fn FixedsysTTF -nb "$transparent" -nf "$white" -sb "$black" -sf "$background"
 
 bindsym $mod+q kill
 
@@ -186,6 +186,8 @@ bindsym $mod+r mode "resize"
 new_window none
 focus_follows_mouse yes
 for_window [class="^"], border pixel 1
+#for_window [title="^$"] floating disable
+
 
 for_window [class="feh"] floating enable
 for_window [class="^TeamViewer.exe$"] floating enable
@@ -208,7 +210,7 @@ for_window [instance="sun-awt-X11-XFramePeer"] floating enable
 for_window [instance="__scratchpad"] floating enable
 for_window [instance="__nmtui"] floating enable
 for_window [class="(?i)pavucontrol"] floating enable, border normal, move position mouse
-for_window [class="Anki"] floating enable, border normal
+for_window [class="Anki"] floating disable
 for_window [class="Zeal"] floating enable, border normal
 for_window [class="Skype"] floating enable, border normal
 
@@ -216,15 +218,13 @@ for_window [class="Skype"] floating enable, border normal
 #  position top
 #  separator_symbol " | "
 
- # status_command i3status --config ~/.config/i3/i3status.conf
+ # status_command i3status --config /home/phulelouch/.config/i3/i3status.conf
   # status_command  i3status
   #status_command SCRIPT_DIR=/i3blocks i3blocks -c ~/.i3/i3blocks.conf
 
-#  colors {
-#    statusline         $white
-#    background         $black
+#colors {
 #    separator          $blue
-
+#R}
     #                  BORDER       BACKGROUND   TEXT
 #    focused_workspace  $transparent $transparent $white
 #    inactive_workspace $transparent $transparent $blue
@@ -268,13 +268,25 @@ exec --no-startup-id xsetroot -solid "#333333"
 exec --no-startup-id synclient VertEdgeScroll=1 TapButton1=1 TapButton2=1 TapButton3=1
 
 # startup
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id /home/phulelouch/.config/polybar/launch.sh
 exec_always --no-startup-id xset b off
-exec_always --no-startup-id feh --bg-scale ~/Desktop/wallpaper.jpg
+exec_always --no-startup-id feh --bg-scale /home/phulelouch/Desktop/wallpaper.jpg
 exec_always --no-startup-id alias ls="ls --color"
 exec_always --no-startup-id nm-applet
 exec_always --no-startup-id dconf write /org/gnome/settings-daemon/plugins/color/night-light-enabled true 
+exec_always --no-startup-id cp /usr/share/zoneinfo/Europe/London /etc/localtime
+exec_always --no-startup-id mount /dev/sda4 /mnt
+exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 # light 
 
 bindsym XF86MonBrightnessUp exec light -A 5 	
 bindsym XF86MonBrightnessDown exec light -U 5 
+
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+
+for_window [title="Iriun"] floating enable
+for_window [title="Iriun"] sticky enable
+
+for_window [title="flutter"] floating disable
+for_window [title="Android"] floating disable
