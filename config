@@ -204,3 +204,13 @@ bindsym $sup+m    exec amixer -D pulse set  Master 1+ toggle
 exec_always --no-startup-id feh --bg-scale /home/phulelouch/Desktop/wallpaper.jpg
 
 bindsym Print exec scrot '%Y-%m-%d-%T_$wx$h_scrot.png' -e 'mv $f ~/Pictures'
+
+bindsym shift+Print exec gnome-screenshot -a
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+
+for_window [title="Camera"] floating enable
+for_window [title="Camera"] sticky enable
+for_window [title="Camera"] move position 1220 680
+for_window [title="Camera"] resize set 700 400
+bindsym $mod+Shift+s exec i3lock
