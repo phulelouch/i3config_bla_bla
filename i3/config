@@ -41,7 +41,7 @@ gaps outer 0
 floating_minimum_size -1 x -1
 floating_maximum_size -1 x -1
 
-font pango:Consolas, FontAwesome Bold 11
+font pango:Consolas, FontAwesome Bold 8
 
 # #CLASS                   BORDER   BACKGROUND  TEXT     INDICATOR
 #client.focused           #4c7899  $black       #eff1f5  #2e9ef4
@@ -215,17 +215,17 @@ for_window [class="Anki"] floating disable
 for_window [class="Zeal"] floating enable, border normal
 for_window [class="Skype"] floating enable, border normal
 
-#bar {
+bar {
 #  position bottom
 #  separator_symbol " | "
 
  # status_command i3status --config /home/phulelouch/.config/i3/i3status.conf
-  # status_command  i3status
+   status_command  i3status
   #status_command SCRIPT_DIR=/i3blocks i3blocks -c ~/.i3/i3blocks.conf
 
 #colors {
 #    separator          $blue
-#R}
+#}
     #                  BORDER       BACKGROUND   TEXT
 #    focused_workspace  $transparent $transparent $white
 #    inactive_workspace $transparent $transparent $blue
@@ -233,7 +233,7 @@ for_window [class="Skype"] floating enable, border normal
 #    urgent_workspace   $transparent $transparent $red
 #    binding_mode       $transparent $transparent $red
 #  }
-#}
+}
 
 #assign workspace
 #assign [class="google-chrome"] $ws2
@@ -291,3 +291,5 @@ for_window [title="Iriun"] sticky enable
 
 for_window [title="flutter"] floating disable
 for_window [title="Android"] floating disable
+
+exec_always --no-startup-id killall -q polybar
